@@ -2,6 +2,8 @@
 
 A powerful AI assistant that combines natural language chat, image analysis, and image generation capabilities in a user-friendly interface. Built with FastAPI backend and Streamlit frontend, powered by Gemini 2.5 Flash.
 
+Live Demo: https://vision-and-text-multimodal-generation-and-analysis-ei9sswte3pn.streamlit.app/
+
 ## ✨ Features
 
 ### 💬 Chat Mode (Default)

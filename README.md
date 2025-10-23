@@ -115,30 +115,21 @@ A powerful AI assistant that combines natural language chat, image analysis, and
 
 ### Running the Application
 
-**Single Command:**
-```bash
-streamlit run streamlit.py
-```
+You need to run both the FastAPI backend and Streamlit frontend:
 
-This starts both:
-- FastAPI backend (port 8000)
-- Streamlit frontend (port 8501)
-
-Access the application at `http://localhost:8501`
-
-**Manual Start (Optional):**
-
-If you need to run them separately:
-
-1. Start FastAPI backend:
+1. **Start FastAPI backend (Terminal 1):**
    ```bash
    uvicorn com.mhire.app.main:app --host 0.0.0.0 --port 8000
    ```
 
-2. Start Streamlit frontend:
+2. **Start Streamlit frontend (Terminal 2):**
    ```bash
    streamlit run streamlit.py
    ```
+
+Access the application at `http://localhost:8501`
+
+The FastAPI backend runs on port 8000 and Streamlit frontend runs on port 8501.
 
 ## 🛠️ Configuration
 
@@ -165,13 +156,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Streamlit](https://streamlit.io/) - User interface
 - [Gemini 2.5 Flash](https://deepmind.google/technologies/gemini/) - AI capabilities
 - All contributors and maintainers
-
-## 📞 Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Check existing documentation
-- Review the API endpoints
 
 ---
 

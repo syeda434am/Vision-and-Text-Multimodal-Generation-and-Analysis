@@ -65,41 +65,14 @@ A powerful AI assistant that combines natural language chat, image analysis, and
 ## 🔄 API Flow
 
 ### Chat Mode
-
-```mermaid
-graph LR
-    A[User Input] --> B{Type?}
-    B -->|Text Only| C[/api/v1/chat/]
-    B -->|Image Upload| D[/api/v1/itt/analyze]
-    D -->|With Prompt| E[Custom Analysis]
-    D -->|Without Prompt| F[General Analysis]
-```
+- **Text Only:** User Input → `/api/v1/chat/` → Response
+- **Image Upload (General):** User Input + Image → `/api/v1/itt/analyze` → General Analysis
+- **Image Upload (Specific):** User Input + Image + Prompt → `/api/v1/itt/analyze` → Custom Analysis
 
 ### Create Image Mode
-
-```mermaid
-graph LR
-    A[User Input] --> B{Type?}
-    B -->|Text Only| C[/api/v1/tti/generate]
-    B -->|Image Upload| D[Image Processing]
-    D -->|With Prompt| E[Custom Modification]
-    D -->|Without Prompt| F[Auto Enhancement]
-```
-
-## 📦 Project Structure
-
-```
-image_generation/
-├── streamlit.py              # Frontend interface
-├── requirements.txt          # Python dependencies
-├── .env                      # Environment variables (not in repo)
-└── com/
-    └── mhire/
-        └── app/
-            ├── main.py       # FastAPI application
-            ├── config/       # Configuration files
-            └── services/     # Backend services
-```
+- **Text-to-Image:** Text Prompt → `/api/v1/tti/generate` → Generated Image
+- **Image Enhancement:** Image Upload → `/api/v1/tti/generate` → Enhanced Image
+- **Custom Modification:** Image + Instructions → `/api/v1/tti/generate` → Modified Image
 
 ## 🚀 Quick Start
 

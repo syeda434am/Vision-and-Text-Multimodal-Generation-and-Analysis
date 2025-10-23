@@ -6,7 +6,7 @@ import uuid
 from PIL import Image
 
 # FastAPI backend URL
-BACKEND_URL = "http://localhost:8000"
+BACKEND_URL = "https://vision-and-text-multimodal-generation.onrender.com"
 
 # Page configuration
 st.set_page_config(page_title="AI Assistant", layout="centered", initial_sidebar_state="collapsed")
